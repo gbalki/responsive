@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <style>
+        .highlight {
+            background-color: gray;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <h3 id="header">Kurslarım</h3>
+    <a href="#">Link 1</a>
+    <ul id="liste">
+        <li class="item">Java Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil provident accusamus eaque
+            ullam illo aspernatur iusto eum, dicta cupiditate officiis, ab voluptate delectus quod nesciunt natus in
+            fugit beatae ducimus.<a href="#"> Link 2</a></li>
+        <li>JavaScript Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere saepe delectus nostrum autem
+            impedit quibusdam ducimus reiciendis! Quaerat ut libero facere aperiam assumenda asperiores ad ipsa, neque
+            ab ipsum fugit.</li>
+        <li>Python Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, eaque exercitationem. Quae
+            optio vitae dolor possimus dolore. Eaque repudiandae accusantium, tempora doloribus, vero dolor error
+            assumenda enim itaque vitae qui?</li>
+            <img src="eren1.jpg" width="200px">
+            <br>
+        <input id="ad" type="text" placeholder="Adınız">
+        <input id="soyad" type="text" placeholder="Soyadınız">
+        <button id="btnKayitol" onclick="kayit();">Kayıt Ol</button>
+    </ul>
+
+    <script>
+        $("#header").text("Udemy Kurslarım");
+        function kayit() {
+            var ad = $("#ad").val();
+            var soyad = $("#soyad").val();
+
+            console.log(ad + " " + soyad + " " + " Kursa kayıt oldu...");
+            $("#ad").addClass("highlight");
+            $("#soyad").addClass("orange");
+            $("img").attr("width","350px");
+        }
+
+    </script>
+</body>
+
+</html>

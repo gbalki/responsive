@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <style>
+        .renkdegistir {
+            color: purple;
+            font-size: 22px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p id="p1">JavaScript Web Geliştirme Kursu</p>
+
+    <p id="p2">JavaScript Web Geliştirme Kursu</p>
+
+    <p class="paragraf">JavaScript Web Geliştirme Kursu</p>
+
+    <p class="paragraf">JavaScript Web Geliştirme Kursu</p>
+
+    <form>
+        Adınız:<input type="text" class="control">
+        Öğrenim Durumu: <select class="control">
+            <option value="ilkokul">İlk okul</option>
+            <option value="ortaokul">Orta Okul</option>
+            <option value="lise">Lise</option>
+            <option value="universite">Üniversite</option>
+        </select>
+    </form>
+
+    <p id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore maxime voluptates pariatur repudiandae
+        reiciendis dolorum beatae perspiciatis. Vel tempore magni impedit nam quasi, ut provident quis rem vitae ad id.
+    </p>
+    <button id="show">Show</button>
+    <button id="hide">Hide</button>
+    <button id="toogle">Toogle</button>
+
+    <script>
+
+        $(document).ready(function () {
+            $('.paragraf').click(function () {
+                $(this).addClass("renkdegistir");
+            });
+        });
+
+        $(document).ready(function () {
+            $(".control").change(function () {
+                console.log($(this).val());
+            });
+        });
+
+        $(document).ready(function (){
+            $("#show").click(function(){
+                $("#p3").show(2000);
+            });
+            $("#hide").click(function(){
+                $("#p3").hide("fast");
+            });
+            $("#toogle").click(function(){
+                $("#p3").toggle("fast",function(){
+                    $("#p3").css("color","purple");
+                });
+            });
+        });
+        
+    </script>
+</body>
+
+</html>
